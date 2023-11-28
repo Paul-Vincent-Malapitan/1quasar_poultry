@@ -2,7 +2,7 @@
 const routes = [
   {
     path: '/',
-    component: () => import('layouts/MainLayout.vue'),
+    component: () => import ('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/Admin/Dashboard.vue') },
       { path: '/user', component: () => import('pages/Admin/CreateUser.vue') },
