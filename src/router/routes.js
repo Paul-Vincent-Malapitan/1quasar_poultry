@@ -20,6 +20,9 @@ const routes = [
   component: () => import('layouts/CustomerLayout.vue'),
   children: [
     { path: '/product_list', component: () => import('pages/Customer/ProductList.vue') },
+    { path: '/order', component: () => import('pages/Customer/Order.vue') },
+    { path: '/chat', component: () => import('pages/Customer/Chat.vue') },
+    { path: '/notif', component: () => import('pages/Customer/Notification.vue') },
   ]
   },
 
