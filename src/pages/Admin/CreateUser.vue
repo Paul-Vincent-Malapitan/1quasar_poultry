@@ -1,40 +1,45 @@
 <template>
-  <q-page>
-    <q-container>
-      <q-card>
-        <q-card-section>
-          <q-form @submit="submitForm">
-            <q-input
-              v-model="user.name"
-              label="Name"
-              outlined
-              dense
-            />
-            <q-input
-              v-model="user.email"
-              label="Email"
-              type="email"
-              outlined
-              dense
-            />
-            <q-input
-              v-model="user.password"
-              label="Password"
-              type="password"
-              outlined
-              dense
-            />
-            <q-btn
-              type="submit"
-              label="Create Account"
-              color="primary"
-              :disable="isFormInvalid"
-            />
-          </q-form>
-        </q-card-section>
-      </q-card>
-    </q-container>
-  </q-page>
+  <div>
+    <q-card>
+      <q-card-title>
+        Create User Account
+      </q-card-title>
+
+      <q-card-section>
+        <q-form @submit.prevent>
+          <q-field label="Name">
+            <q-input v-model="user.name" required />
+          </q-field>
+
+          <q-field label="Email Address">
+            <q-input v-model="user.email" required type="email" />
+          </q-field>
+
+          <q-field label="Password">
+            <q-input v-model="user.password" required type="password" />
+          </q-field>
+
+          <q-field label="Contact Number">
+            <q-input v-model="user.contact" required />
+          </q-field>
+
+          <q-field label="Address">
+            <q-input v-model="user.address" required />
+          </q-field>
+
+          <q-field label="Role">
+            <q-select v-model="user.role" required :options="roles" />
+          </q-field>
+
+          <q-btn type="submit" color="primary" label="Create User" />
+        </q-form>
+      </q-card-section>
+
+      <q-card-actions>
+        <q-btn flat label="Cancel" @click="cancel" />
+      </q-card-actions>
+    </q-card>
+  </div>
 </template>
 
 <script>
@@ -44,27 +49,26 @@ export default {
       user: {
         name: '',
         email: '',
-        password: ''
-      }
+        password: '',
+        contact: '',
+        address: '',
+        role: '',
+      },
+      roles: [
+        { label: 'Admin', value: 'admin' },
+        { label: 'Staff', value: 'staff' },
+        { label: 'Customer', value: 'customer' },
+      ],
     };
   },
-  computed: {
-    isFormInvalid() {
-      return !(this.user.name && this.user.email && this.user.password);
-    }
-  },
   methods: {
-    submitForm() {
-      // You can dispatch an action to handle the form submission in Vuex
-      this.$store.dispatch('createUser', this.user);
-
-      // Optionally, you can redirect to another page after successful submission
-      // this.$router.push('/some-other-page');
-    }
-  }
+    cancel() {
+      // Implement logic to cancel user creation and redirect to previous page
+    },
+    createUser() {
+      // Implement logic to send user data to server for account creation
+      // After successful creation, redirect to user management page
+    },
+  },
 };
 </script>
-
-<style scoped>
-/* Add custom styles here if needed */
-</style>

@@ -1,14 +1,14 @@
 <template>
   <q-card class="bg-transparent no-shadow no-border" bordered>
-    <q-card-section class="q-pa-none">
-      <div class="row q-col-gutter-sm ">
-        <div v-for="(item, index) in items" :key="index" class="col-md-3 col-sm-12 col-xs-12">
-          <q-item :style="`background-color: ${item.color1}`" class="q-pa-none">
-            <q-item-section v-if="icon_position === 'left'" side :style="`background-color: ${item.color2}`"
-                            class=" q-pa-lg q-mr-none text-white">
+    <q-card-section class="q-mb-md q-pa-md">
+      <div class="row q-col-gutter-md">
+        <div v-for="(item, index) in items" :key="index" class="col-md-3 col-sm-12 col-xs-12 q-mb-md">
+          <q-item :style="`background-color: ${item.color1}; border-radius: 8px;`" class="q-pa-none">
+            <q-item-section v-if="icon_position === 'left'" side :style="`background-color: ${item.color2}; border-radius: 8px 0 0 8px;`"
+                            class="q-pa-lg q-mr-none text-white">
               <q-icon :name="item.icon" color="white" size="24px"></q-icon>
             </q-item-section>
-            <q-item-section class=" q-pa-md q-ml-none  text-white">
+            <q-item-section class="q-pa-md q-ml-none text-white">
               <q-item-label class="text-white text-h6 text-weight-bolder">{{ item.value }}</q-item-label>
               <q-item-label>{{ item.title }}</q-item-label>
             </q-item-section>
@@ -21,6 +21,9 @@
     </q-card-section>
   </q-card>
 </template>
+
+<!-- Rest of your code remains unchanged -->
+
 
 <script>
 import {defineComponent} from 'vue'
@@ -38,28 +41,28 @@ export default defineComponent({
       return this.icon_position === "left"
         ? [
           {
-            title: "My Account",
+            title: "Daily Sales",
             icon: "person",
             value: "200",
             color1: "#5064b5",
             color2: "#3e51b5"
           },
           {
-            title: "Followers",
+            title: "Weekly Sales",
             icon: "fab fa-twitter",
             value: "500",
             color1: "#f37169",
             color2: "#f34636"
           },
           {
-            title: "Connections",
+            title: "Monthly Sales",
             icon: "fab fa-google",
             value: "50",
             color1: "#ea6a7f",
             color2: "#ea4b64"
           },
           {
-            title: "Website Visits",
+            title: "Expected Yearly Sale",
             icon: "bar_chart",
             value: "1020",
             color1: "#a270b1",
