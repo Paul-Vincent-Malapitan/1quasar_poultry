@@ -2,9 +2,9 @@
 const routes = [
   {
     path: '/',
-    component: () => import ('layouts/MainLayout.vue'),
+    component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Admin/Dashboard.vue') },
+      { path: '', component: () => import('pages/IndexPage.vue') },
       { path: '/user', component: () => import('pages/Admin/CreateUser.vue') },
       { path: '/dashboard', component: () => import('pages/Admin/Dashboard.vue') },
       { path: '/delete', component: () => import('pages/Admin/Delete.vue') },
@@ -14,6 +14,13 @@ const routes = [
       { path: '/edit_branch', component: () => import('pages/Admin/EditBranch.vue') },
 
     ]
+  },
+{
+  path: '/customer',
+  component: () => import('layouts/CustomerLayout.vue'),
+  children: [
+    { path: '/product_list', component: () => import('pages/Customer/ProductList.vue') },
+  ]
   },
 
 
