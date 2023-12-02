@@ -7,6 +7,7 @@ const routes = [
 
       { path: '/user', component: () => import('pages/Admin/CreateUser.vue') },
       { path: '/', component: () => import('pages/Admin/Dashboard.vue') },
+      { path: '/dashboard', component: () => import('pages/Admin/Dashboard.vue') },
       { path: '/delete', component: () => import('pages/Admin/Delete.vue') },
       { path: '/update', component: () => import('pages/Admin/Update.vue') },
       { path: '/branch_list', component: () => import('pages/Admin/BranchList.vue') },
