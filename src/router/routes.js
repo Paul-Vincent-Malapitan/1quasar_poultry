@@ -13,8 +13,6 @@ const routes = [
       { path: '/branch_list', component: () => import('pages/Admin/BranchList.vue') },
       { path: '/add_branch', component: () => import('pages/Admin/AddBranch.vue') },
       { path: '/edit_branch', component: () => import('pages/Admin/EditBranch.vue') },
-      { path: '/chart', component: () => import('pages/Admin/Chart.vue') },
-
 
     ]
   },
@@ -22,6 +20,7 @@ const routes = [
   path: '/customer',
   component: () => import('layouts/CustomerLayout.vue'),
   children: [
+    { path: '/customer', component: () => import('pages/Customer/ProductList.vue') },
     { path: '/product_list', component: () => import('pages/Customer/ProductList.vue') },
     { path: '/order', component: () => import('pages/Customer/Order.vue') },
     { path: '/chat', component: () => import('pages/Customer/Chat.vue') },

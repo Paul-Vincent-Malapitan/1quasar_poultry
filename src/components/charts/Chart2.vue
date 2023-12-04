@@ -1,13 +1,9 @@
 <!-- src/components/ChartComponent.vue -->
 
 <template>
-  <q-card>
-    <q-card-section class="q-pa-md">
-      <div>
-        <canvas ref="myChart"></canvas>
-      </div>
-    </q-card-section>
-  </q-card>
+  <div>
+    <canvas ref="myChart"></canvas>
+  </div>
 </template>
 
 <script>
@@ -31,7 +27,7 @@ export default {
     renderChart() {
       const ctx = this.$refs.myChart.getContext('2d');
       new Chart(ctx, {
-        type: 'line', // Change to 'line' for a line chart
+        type: 'doughnut', // Change to 'bar' for a bar chart
         data: this.chartData,
         options: this.chartOptions,
       });

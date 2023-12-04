@@ -22,14 +22,15 @@
   </q-card>
 
   <div >
-  <q-page class="row">
-    <q-container class="col">
-      <chart-component :chartData="chartData" :chartOptions="chartOptions" />
-    </q-container>
-    <q-container class="col">
-      <chart-component :chartData="chartData" :chartOptions="chartOptions" />
-    </q-container>
-  </q-page>
+    <q-page class="row">
+         <q-container class="col">
+              <chart-component :chartData="chartData" :chartOptions="chartOptions"></chart-component>
+          </q-container>
+
+          <q-container class="col">
+            <chart-component :chart-data="barChartData" :chart-options="barChartOptions"></chart-component>
+          </q-container>
+    </q-page>
   </div>
 
 
@@ -39,12 +40,15 @@
 
 
 <script>
+
 import { defineComponent } from 'vue';
 import ChartComponent from 'components/charts/Chart.vue';
+import BarChart from 'components/charts/Chart2.vue';
 
 export default defineComponent({
   name: "CardSocial",
   components: {
+    BarChart,
     ChartComponent,
   },
   props: {
@@ -55,27 +59,36 @@ export default defineComponent({
   },
   data() {
     return {
+      barChartData: {
+        labels: ['Monday', 'Tuesday', 'Thursday', 'Friday', 'Saturday'],
+        datasets: [
+          {
+            type: 'doughnut',
+            label: 'Monthly Sales',
+            backgroundColor: 'rgba(80, 190, 189, 0.2)',
+            borderColor: 'rgba(78, 190, 195, 2)',
+            borderWidth: 1,
+            data: [35, 45, 70, 98, 8],
+          },
+        ],
+      },
+      barChartOptions: {
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      },
       chartData: {
         labels: ['January', 'February', 'March', 'April', 'May'],
         datasets: [
           {
-            type: '',
-
-            label: 'Sample Data',
+            type: 'line',
+            label: 'Daily Sales',
             backgroundColor: 'rgba(75, 192, 192, 0.2)',
             borderColor: 'rgba(75, 192, 192, 1)',
             borderWidth: 1,
-            data: [65, 59, 80, 81, 56],
-            fill: false, // Important for a line chart
-          },
-          {
-            type: '',
-
-            label: 'Sample Data',
-            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-            borderColor: 'rgba(75, 192, 192, 1)',
-            borderWidth: 1,
-            data: [65, 59, 80, 81, 56],
+            data: [1, 59, 80, 81, 200],
             fill: false, // Important for a line chart
           },
         ],
@@ -83,6 +96,18 @@ export default defineComponent({
       chartOptions: {
         responsive: true,
         maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      },
+       barChartOptions: {
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
       },
     };
   },
@@ -154,3 +179,11 @@ export default defineComponent({
 });
 </script>
 
+<style scoped>
+/* Add the following styles to ensure charts have the same size */
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+</style>
