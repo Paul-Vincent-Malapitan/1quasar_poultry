@@ -1,5 +1,5 @@
 <template>
-  <h1>Delete</h1>
+  <h1>Inventory</h1>
 </template>
 <script>
 </script>

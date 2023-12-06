@@ -3,7 +3,7 @@
 <template>
   <q-card>
     <q-card-section class="q-pa-md">
-      <div>
+      <div class="chart-container">
         <canvas ref="myChart"></canvas>
       </div>
     </q-card-section>
@@ -41,5 +41,15 @@ export default {
 </script>
 
 <style scoped>
-/* Add your styles here if needed */
+.chart-container {
+  position: relative;
+  height: 300px; /* Set the height according to your design */
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px; /* Optional: add border-radius for a more modern look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add box-shadow for depth */
+}
 </style>

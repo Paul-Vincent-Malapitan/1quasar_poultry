@@ -28,7 +28,22 @@ const routes = [
   ]
   },
 
+  {
+    path: '/staff',
+    component: () => import('layouts/StaffLayout.vue'),
+    children: [
+      { path: '/staff', component: () => import('pages/Staff/StaffDash.vue') },
+      { path: '/chat_s', component: () => import('pages/Staff/Chat.vue') },
+      { path: '/delivery', component: () => import('pages/Staff/Delivery.vue') },
+      { path: '/inquiries', component: () => import('pages/Staff/Inquiries.vue') },
+      { path: '/inventory', component: () => import('pages/Staff/Inventory.vue') },
+      { path: '/notifications', component: () => import('pages/Staff/Notifications.vue') },
+      { path: '/order_management', component: () => import('pages/Staff/OrderManagement.vue') },
+      { path: '/staff_dash', component: () => import('pages/Staff/StaffDash.vue') },
 
+
+    ]
+    },
   // Always leave this as last one,
   // but you can also remove it
   {
