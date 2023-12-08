@@ -5,11 +5,9 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
 
-      { path: '/user', component: () => import('pages/Admin/CreateUser.vue') },
       { path: '/', component: () => import('pages/Admin/Dashboard.vue') },
       { path: '/dashboard', component: () => import('pages/Admin/Dashboard.vue') },
-      { path: '/delete', component: () => import('pages/Admin/Delete.vue') },
-      { path: '/update', component: () => import('pages/Admin/Update.vue') },
+      { path: '/user_manage', component: () => import('pages/Admin/UserManagement.vue') },
       { path: '/branch_list', component: () => import('pages/Admin/BranchList.vue') },
       { path: '/add_branch', component: () => import('pages/Admin/AddBranch.vue') },
       { path: '/edit_branch', component: () => import('pages/Admin/EditBranch.vue') },

@@ -27,40 +27,18 @@
           </q-item>
         </q-list>
 
-      <q-expansion-item
-          icon="people"
-          label="User Management"
-        >
-          <q-list class="q-pl-lg">
-            <q-item to="/user" active-class="">
+
+          <q-list>
+            <q-item to="/user_manage" active-class="">
               <q-item-section avatar>
-                <q-icon name="add"/>
+                <q-icon name="people"/>
               </q-item-section>
               <q-item-section>
-                <q-item-label>Create</q-item-label>
+                <q-item-label>User Management</q-item-label>
               </q-item-section>
             </q-item>
+            </q-list>
 
-            <q-item to="/update" active-class="q-item-no-link-highlighting">
-              <q-item-section avatar>
-                <q-icon name="edit"/>
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Update</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item to="/delete" active-class="q-item-no-link-highlighting">
-              <q-item-section avatar>
-                <q-icon name="delete"/>
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Delete</q-item-label>
-              </q-item-section>
-            </q-item>
-
-          </q-list>
-        </q-expansion-item>
 
         <q-expansion-item
           icon="people"
