@@ -39,78 +39,27 @@
             </q-item>
             </q-list>
 
-
-        <q-expansion-item
-          icon="people"
-          label="Branch Management"
-        >
-          <q-list class="q-pl-lg">
-            <q-item to="/branch_list" active-class="">
+            <q-list>
+            <q-item to="/branch_manage" active-class="">
               <q-item-section avatar>
-                <q-icon name="add"/>
+                <q-icon name="people"/>
               </q-item-section>
               <q-item-section>
-                <q-item-label>Branch List</q-item-label>
+                <q-item-label>Branch Management</q-item-label>
               </q-item-section>
             </q-item>
+            </q-list>
 
-            <q-item to="/add_branch" active-class="q-item-no-link-highlighting">
+            <q-list>
+            <q-item to="/inventory_manage" active-class="">
               <q-item-section avatar>
-                <q-icon name="edit"/>
+                <q-icon name="people"/>
               </q-item-section>
               <q-item-section>
-                <q-item-label>Add Branch</q-item-label>
+                <q-item-label>Inventory Management</q-item-label>
               </q-item-section>
             </q-item>
-
-            <q-item to="/edit_branch" active-class="q-item-no-link-highlighting">
-              <q-item-section avatar>
-                <q-icon name="delete"/>
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Edit Branch</q-item-label>
-              </q-item-section>
-            </q-item>
-
-          </q-list>
-        </q-expansion-item>
-
-
-
-        <q-expansion-item
-          icon="people"
-          label="Inventory Management"
-        >
-          <q-list class="q-pl-lg">
-            <q-item to="/branch_list" active-class="">
-              <q-item-section avatar>
-                <q-icon name="add"/>
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Stock Level</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item to="/add_branch" active-class="q-item-no-link-highlighting">
-              <q-item-section avatar>
-                <q-icon name="edit"/>
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Add Stocks</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item to="/edit_branch" active-class="q-item-no-link-highlighting">
-              <q-item-section avatar>
-                <q-icon name="delete"/>
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Deceased Chicken</q-item-label>
-              </q-item-section>
-            </q-item>
-
-          </q-list>
-        </q-expansion-item>
+            </q-list>
     </q-drawer>
 
     <q-page-container>

@@ -64,7 +64,7 @@ export default defineComponent({
         datasets: [
           {
             type: 'doughnut',
-            label: 'Monthly Sales',
+            label: 'Number of Deceased Chicken',
             backgroundColor: 'rgba(80, 190, 189, 0.2)',
             borderColor: 'rgba(78, 190, 195, 2)',
             borderWidth: 1,
@@ -84,7 +84,7 @@ export default defineComponent({
         datasets: [
           {
             type: 'line',
-            label: 'Daily Sales',
+            label: 'Dressed Chicken',
             backgroundColor: 'rgba(75, 192, 192, 0.2)',
             borderColor: 'rgba(75, 192, 192, 1)',
             borderWidth: 1,

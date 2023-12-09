@@ -8,9 +8,8 @@ const routes = [
       { path: '/', component: () => import('pages/Admin/Dashboard.vue') },
       { path: '/dashboard', component: () => import('pages/Admin/Dashboard.vue') },
       { path: '/user_manage', component: () => import('pages/Admin/UserManagement.vue') },
-      { path: '/branch_list', component: () => import('pages/Admin/BranchList.vue') },
-      { path: '/add_branch', component: () => import('pages/Admin/AddBranch.vue') },
-      { path: '/edit_branch', component: () => import('pages/Admin/EditBranch.vue') },
+      { path: '/branch_manage', component: () => import('pages/Admin/BranchManagement.vue') },
+      { path: '/inventory_manage', component: () => import('pages/Admin/InventoryManagement.vue') },
 
     ]
   },
