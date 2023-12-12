@@ -49,6 +49,14 @@ const routes = [
     ]
     },
 
+    {
+      path: '/register',
+      component: () => import('layouts/Register.vue'),
+      children: [
+
+      ]
+      },
+
   // Always leave this as last one,
   // but you can also remove it
   {
