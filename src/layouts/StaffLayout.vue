@@ -38,16 +38,7 @@
           </q-item>
         </q-list>
 
-        <q-list>
-        <q-item to="delivery" active-class="q-item-no-link-highlighting">
-          <q-item-section avatar>
-            <q-icon name="dashboard"/>
-              </q-item-section>
-                <q-item-section>
-                  <q-item-label>Delivery</q-item-label>
-              </q-item-section>
-          </q-item>
-        </q-list>
+
 
         <q-list>
         <q-item to="inventory" active-class="q-item-no-link-highlighting">
@@ -71,16 +62,7 @@
           </q-item>
         </q-list>
 
-        <q-list>
-        <q-item to="inquiries" active-class="q-item-no-link-highlighting">
-          <q-item-section avatar>
-            <q-icon name="dashboard"/>
-              </q-item-section>
-                <q-item-section>
-                  <q-item-label>Inquiries</q-item-label>
-              </q-item-section>
-          </q-item>
-        </q-list>
+
 
         <q-list>
         <q-item to="notifications" active-class="q-item-no-link-highlighting">

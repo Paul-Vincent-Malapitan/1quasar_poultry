@@ -39,8 +39,12 @@ const routes = [
       { path: '/order_management', component: () => import('pages/Staff/OrderManagement.vue') },
       { path: '/staff_dash', component: () => import('pages/Staff/StaffDash.vue') },
 
-
-
+    ]
+    },
+    {
+    path: '/login',
+    component: () => import('layouts/Login.vue'),
+    children: [
 
     ]
     },
