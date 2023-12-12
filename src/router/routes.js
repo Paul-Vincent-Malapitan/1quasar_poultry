@@ -10,6 +10,7 @@ const routes = [
       { path: '/user_manage', component: () => import('pages/Admin/UserManagement.vue') },
       { path: '/branch_manage', component: () => import('pages/Admin/BranchManagement.vue') },
       { path: '/inventory_manage', component: () => import('pages/Admin/InventoryManagement.vue') },
+      { path: '/add_products', component: () => import('pages/Admin/AddProducts.vue') },
 
     ]
   },
@@ -37,6 +38,8 @@ const routes = [
       { path: '/notifications', component: () => import('pages/Staff/Notifications.vue') },
       { path: '/order_management', component: () => import('pages/Staff/OrderManagement.vue') },
       { path: '/staff_dash', component: () => import('pages/Staff/StaffDash.vue') },
+
+
 
 
     ]

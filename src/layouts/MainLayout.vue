@@ -60,6 +60,17 @@
               </q-item-section>
             </q-item>
             </q-list>
+
+            <q-list>
+            <q-item to="/add_products" active-class="">
+              <q-item-section avatar>
+                <q-icon name="people"/>
+              </q-item-section>
+              <q-item-section>
+                <q-item-label>Add Products</q-item-label>
+              </q-item-section>
+            </q-item>
+            </q-list>
     </q-drawer>
 
     <q-page-container>
