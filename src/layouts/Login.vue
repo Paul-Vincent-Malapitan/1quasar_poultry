@@ -16,7 +16,11 @@
           </q-card-section>
           <q-card-section class="text-center q-pt-none">
             <div class="text-grey-8">Don't have an account yet?
-              <a href="Register" class="text-dark text-weight-bold" style="text-decoration: none">Sign up.</a>
+              <q-btn class="float-right text-blue-9 text-capitalize"
+              size="sm" style="width:75px;border: 3px solid #080809;"
+              dense label="SignUp"
+                           @click="goToRegister" type="button"/>Sign up.
+
             </div>
           </q-card-section>
         </q-card>
@@ -43,11 +47,19 @@ export default {
     const email = ref('')
     const password = ref('')
 
+
+
     return {
       $q,
       email,
       password
     }
-  }
+  },
+
+  methods: {
+    goToRegister(routes) {
+      this.$router.push('/register')
+    },
+  },
 }
 </script>

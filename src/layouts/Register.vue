@@ -19,7 +19,11 @@
           </q-card-section>
           <q-card-section class="text-center q-pt-none">
             <div class="text-grey-8">Already have an account?
-              <a href="login" class="text-dark text-weight-bold" style="text-decoration: none">Sign in.</a>
+              <q-btn class="float-right text-blue-9 text-capitalize"
+              size="sm" style="width:75px;border: 3px solid #080809;"
+              dense label="SignIn"
+                           @click="goToLogin" type="button"/>Sign In.
+
             </div>
           </q-card-section>
         </q-card>
@@ -57,6 +61,11 @@ export default {
       contact,
       address
     }
-  }
+  },
+  methods: {
+    goToLogin(routes) {
+      this.$router.push('/login')
+    },
+  },
 }
 </script>
