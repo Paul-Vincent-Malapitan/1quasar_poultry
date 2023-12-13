@@ -1,11 +1,11 @@
 
 const routes = [
   {
-    path: '/',
+    path: '/admin',
     component: () => import('layouts/MainLayout.vue'),
     children: [
 
-      { path: '/', component: () => import('pages/Admin/Dashboard.vue') },
+      { path: '/admin', component: () => import('pages/Admin/Dashboard.vue') },
       { path: '/dashboard', component: () => import('pages/Admin/Dashboard.vue') },
       { path: '/user_manage', component: () => import('pages/Admin/UserManagement.vue') },
       { path: '/branch_manage', component: () => import('pages/Admin/BranchManagement.vue') },
