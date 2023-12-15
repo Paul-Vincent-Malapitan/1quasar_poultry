@@ -23,6 +23,7 @@ const routes = [
     { path: '/order', component: () => import('pages/Customer/Order.vue') },
     { path: '/chat', component: () => import('pages/Customer/Chat.vue') },
     { path: '/notif', component: () => import('pages/Customer/Notification.vue') },
+    { path: '/try', component: () => import('pages/Customer/Try.vue') },
   ]
   },
 
@@ -56,6 +57,14 @@ const routes = [
 
       ]
       },
+
+      {
+        path: '/tryuser',
+        component: () => import('layouts/TryUsers.vue'),
+        children: [
+
+        ]
+        },
 
   // Always leave this as last one,
   // but you can also remove it

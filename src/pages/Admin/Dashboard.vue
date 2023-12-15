@@ -22,17 +22,29 @@
   </q-card>
 
   <div >
-    <q-page class="row">
+    <q-page  class="q-page row q-mb-md">
          <q-container class="col">
               <chart-component :chartData="chartData" :chartOptions="chartOptions"></chart-component>
           </q-container>
 
-          <q-container class="col">
+          <q-container class="col-md-6 col-sm-12 col-xs-12">
             <chart-component :chart-data="barChartData" :chart-options="barChartOptions"></chart-component>
           </q-container>
     </q-page>
   </div>
 
+    <q-table
+      :rows="tableData"
+      :columns="columns"
+      row-key="prod_id"
+      class="q-ma-md"
+    >
+      <template v-slot:body-cell-image="props">
+        <q-td :props="props">
+          <q-img :src="props.row.image" />
+        </q-td>
+      </template>
+    </q-table>
 
 </template>
 
@@ -109,8 +121,24 @@ export default defineComponent({
           },
         },
       },
+
+      columns: [
+        { name: 'prod_name', label: 'Product Name', align: 'left', field: 'prod_name', sortable: true },
+        { name: 'category', label: 'Category', align: 'left', field: 'category', sortable: true },
+        { name: 'price', label: 'Price', align: 'right', field: 'price', sortable: true },
+        { name: 'quantity', label: 'Quantity', align: 'right', field: 'quantity', sortable: true },
+        { name: 'image', label: 'Image', align: 'left', field: 'image', sortable: false },
+        // You can add more columns if needed
+      ],
     };
   },
+  methods:
+  {
+    addProduct() {
+      // Your existing addProduct method
+    },
+  },
+
   computed: {
     items: function () {
       return this.icon_position === "left"
