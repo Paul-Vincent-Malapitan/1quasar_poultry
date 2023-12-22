@@ -5,8 +5,8 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
 
-      { path: '/admin', component: () => import('pages/Admin/Dashboard.vue') },
-      { path: '/dashboard', component: () => import('pages/Admin/Dashboard.vue') },
+      { path: '/', component: () => import('pages/Admin/Dashboard.vue') },
+      { path: '/admin_dashboard', component: () => import('pages/Admin/Dashboard.vue') },
       { path: '/user_manage', component: () => import('pages/Admin/UserManagement.vue') },
       { path: '/branch_manage', component: () => import('pages/Admin/BranchManagement.vue') },
       { path: '/inventory_manage', component: () => import('pages/Admin/InventoryManagement.vue') },
@@ -65,6 +65,13 @@ const routes = [
 
         ]
         },
+        {
+          path: '/home',
+          component: () => import('layouts/Home.vue'),
+          children: [
+
+          ]
+          },
 
   // Always leave this as last one,
   // but you can also remove it

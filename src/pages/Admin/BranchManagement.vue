@@ -18,7 +18,14 @@
             <template v-slot:body-cell-location="props">
               {{ props.row.branchLocation }}
             </template>
+            <template v-slot:body-cell-contact="props">
+              {{ props.row.contact }}
+            </template>
             <!-- Add more slots for other properties of your poultry branches -->
+            <template v-slot:top-right="props">
+              <q-btn color="primary" icon="add" @click="addPoultryBranch">Add</q-btn>
+              <q-btn color="accent" icon="update" @click="updatePoultryBranch">Update</q-btn>
+            </template>
           </q-table>
         </q-card-section>
       </q-card>
@@ -28,7 +35,6 @@
   <div>
     <bar-chart :chart-data="chartData" />
   </div>
-
 </template>
 
 <script>
@@ -54,14 +60,15 @@ export default {
         ],
       },
       poultryBranches: [
-        { id: 1, branchName: 'Branch 1', branchLocation: 'Sta. Isabel' },
-        { id: 2, branchName: 'Branch 2', branchLocation: 'Bayanan' },
-        { id: 3, branchName: 'Branch 3', branchLocation: 'Masipit' },
+        { id: 1, branchName: 'Branch 1', branchLocation: 'Sta. Isabel', contact: '123-456-7890' },
+        { id: 2, branchName: 'Branch 2', branchLocation: 'Bayanan', contact: '987-654-3210' },
+        { id: 3, branchName: 'Branch 3', branchLocation: 'Masipit', contact: '555-123-4567' },
         // Add more hardcoded data for other poultry branches
       ],
       columns: [
         { name: 'branchName', label: 'Branch Name', align: 'left', field: 'branchName', sortable: true },
         { name: 'branchLocation', label: 'Location', align: 'left', field: 'branchLocation', sortable: true },
+        { name: 'contact', label: 'Contact', align: 'left', field: 'contact', sortable: true },
         // Add more columns for other properties of your poultry branches
       ],
       pagination: {
@@ -70,6 +77,16 @@ export default {
         sortBy: 'branchName',
       },
     };
+  },
+  methods: {
+    addPoultryBranch() {
+      // Implement logic to add a new poultry branch
+      console.log('Adding poultry branch');
+    },
+    updatePoultryBranch() {
+      // Implement logic to update the selected poultry branch
+      console.log('Updating poultry branch');
+    },
   },
 };
 </script>

@@ -60,16 +60,7 @@
           </q-item>
         </q-list>
 
-        <q-list>
-        <q-item to="/try" active-class="q-item-no-link-highlighting">
-          <q-item-section avatar>
-            <q-icon name="dashboard"/>
-              </q-item-section>
-                <q-item-section>
-                  <q-item-label>Try</q-item-label>
-              </q-item-section>
-          </q-item>
-        </q-list>
+
     </q-drawer>
 
 
